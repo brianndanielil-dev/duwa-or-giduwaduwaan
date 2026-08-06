@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>galing mo</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-image: url(sadmeme.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .emoji {
+            position: fixed;
+            top: -50px;
+            font-size: 100px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateY(-50px);
+            }
+
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="emoji" style="left: 10%; animation-duration: 3s;">😟</div>
+    <div class="emoji" style="left: 25%; animation-duration: 4s;">😟</div>
+    <div class="emoji" style="left: 40%; animation-duration: 2.5s;">😟</div>
+    <div class="emoji" style="left: 55%; animation-duration: 3.5s;">😟</div>
+    <div class="emoji" style="left: 70%; animation-duration: 4.5s;">😟</div>
+    <div class="emoji" style="left: 85%; animation-duration: 3s;">😟</div>
+
+</body>
+</html>
