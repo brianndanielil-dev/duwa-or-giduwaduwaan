@@ -17,47 +17,51 @@
         }
 
         body p {
-            font-size: 50px;
+            font-size: clamp(20px, 5vw, 50px);
             color: rgb(234, 8, 234);
             font-weight: bolder;
         }
 
         .title-section {
-            font-size: 100px;
+            font-size: clamp(40px, 8vw, 100px);
             color: rgb(234, 8, 234);
             font-weight: bolder;
         }
 
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         button {
             cursor: pointer;
-            font-size: 50px;
-            margin: 100px;
-            background: rgb(0, 175, 29);
+            font-size: clamp(18px, 4vw, 40px);
+            padding: 15px 35px;
+            margin: 0;
             border-radius: 100px;
             transition: 0.3s;
             font-weight: bolder;
             color: white;
+            background-color: rgb(0, 175, 29);
+            border: none;
         }
 
         button:hover {
             color: rgb(0, 0, 0);
         }
 
-        .secret-section a {
-            color: rgb(50, 40, 10);
-            font-size: 5px;
-            text-decoration: none;
-        }
-
     </style>
 </head>
 <body>
-
     <section id="title" class="title-section">Yieee Happy Monthsaryyy</section>
     <p>Gusto ba nimo makita ang mahiwagang message?</p>
-
+    
+    <div class="buttons">
     <button id="buton">Yeesss😁</button>
         <button onclick="location.href='grabikanaman.html'">didiayko😒</button>
+        </div>
 
         <script>
             let click = 0;
