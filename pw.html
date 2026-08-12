@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(hmmmm.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        body h1 {
+            margin-bottom: 10px;
+            color: rgb(188, 22, 230);
+            background-color: rgba(87, 83, 83, 0.963);
+            border-radius: 10px;
+        }
+
+        #keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #display {
+            width: 250px;
+            padding: 20px;
+            font-size: 5rem;
+            text-align: left;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        #keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        #password {
+            font-family: arial, sans-serif;
+            background-color: rgb(95, 94, 94);
+            max-width: 300px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>kahibaw bajd sa password?</h1>
+
+
+
+    <div id="password">
+    <input type="text" id="display" readonly>
+    <div id="keys">
+    <button onclick="addNumber('1')" id="keys">1</button>
+    <button onclick="addNumber('2')" id="keys">2</button>
+    <button onclick="addNumber('3')" id="keys">3</button>
+    <button onclick="addNumber('4')" id="keys">4</button>
+    <button onclick="addNumber('5')" id="keys">5</button>
+    <button onclick="addNumber('6')" id="keys">6</button>
+    <button onclick="addNumber('7')" id="keys">7</button>
+    <button onclick="addNumber('8')" id="keys">8</button>
+    <button onclick="addNumber('9')" id="keys">9</button>
+    <button onclick="addNumber('0')" id="keys">0</button>
+    <button onclick="clearDisplay('delete')">Delete</button>
+
+    <button onclick="checkpassword()">Enter</button>
+    </div>
+</div>
+</body>
+<script>
+    function addNumber(number) {
+        let password = document.getElementById("display");
+        password.value += number;
+    }
+    function checkpassword() {
+        let password = document.getElementById("display").value;
+
+        if (password === "1006") {
+            window.location.href = "message.html";
+        } else {
+            alert("ah di mao")
+        }
+    }
+
+    function clearDisplay(){
+        display.value = "";
+    }
+</script>
+</html>
